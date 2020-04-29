@@ -90,7 +90,7 @@ p.lead {
 }
 
 #sideNav .navbar-toggler:focus {
-  outline-color: #d48a6e;
+  outline-color: #EE82EE;
 }
 
 @media (min-width: 992px) {
@@ -133,6 +133,7 @@ p.lead {
   }
 }
 
+/* !important eh um overhead de hierarquia do css, n eh uma boa pratica */
 section.resume-section {
   padding-top: 5rem !important;
   padding-bottom: 5rem !important;
@@ -160,7 +161,7 @@ section.resume-section .resume-item .resume-date {
 }
 
 .bg-primary {
-  background-color: #BD5D38 !important;
+  background-color: rgb(90, 23, 90) !important;
 }
 
 .text-primary {
