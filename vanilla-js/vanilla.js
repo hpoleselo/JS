@@ -36,14 +36,16 @@ function testingOperators() {
    Check the example below
     */
    var string1 = "Surfing";
-   
-   // {} represents an object in JS
-   var strng_obj = {string: "Surfing"};
-   if (string1 == strng_obj) {
+
+   /* Objects are variables too! But they can contain many values, like dictionary in Python. Key-pair values...
+   And like Python (as POO), an object has methods (functions)
+   {} represents an object in JS, like in Python!  */
+   var henrique = {hobby: "Surfing"};
+   if (string1 == henrique) {
        console.log("Content from both variables are equal");
    }
 
-   else if (string1 === strng_obj) {
+   else if (string1 === henrique) {
        console.log("I don't know");
    }
 
