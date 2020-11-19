@@ -35,11 +35,20 @@ function testingOperators() {
 
    Check the example below
     */
-   strng
+   var string1 = "Surfing";
+   var strng_obj = {string: "Surfing"};
+   if (string1 == strng_obj) {
+       console.log("Content from both variables are equal");
+   }
+
+   else if (string1 === strng_obj) {
+       console.log("I don't know");
+   }
 
 }
 
 function aboutECS() {
+    /* ECMAScript = ECS is the standardization of */
 
 }
 
@@ -47,3 +56,6 @@ function aboutECS() {
 function aboutArrowFunctions() {
 
 }
+
+
+testingOperators()
