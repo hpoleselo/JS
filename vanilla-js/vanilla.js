@@ -36,6 +36,8 @@ function testingOperators() {
    Check the example below
     */
    var string1 = "Surfing";
+   
+   // {} represents an object in JS
    var strng_obj = {string: "Surfing"};
    if (string1 == strng_obj) {
        console.log("Content from both variables are equal");
