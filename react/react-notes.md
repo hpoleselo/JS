@@ -1,23 +1,45 @@
 # Notes
 
 ## Motivation: why use React?
-Event-driven programming. When learning React we can then go to Mobile App Dev, like...
+Event-driven programming.
 
 ## Understanding React
-React is all about component. Usually we have one component per file, so for an application we would have: ```Button.js``` ```Window.js```
+React is all about component. Usually we have one component per file, so for an application we would have: ```Button.js```, ```Window.js``` and so on.
 Each component in React is basically a function in JS and this function returns a HTML (UI), which is written in JSX.
 JSX = JavaScript XML, basically HTML.
 
-This HTML is gonna change(*react*) the behaviour according to the component. 
+This HTML is gonna change/**react** the behaviour according to the component. 
 
-We can give an internal state (?) to our component, for that we use a *state hook*:
+To give this internal state to our component,  we use a *state hook*:
 ``` import { useState } from 'react' ```
 
-But what is a hook? Is a function that returns a value AND a function that CHANGES (reacts) the value, hence we have
-the dynamic behaviour from ```React```.
+But what is a hook? Is a function that returns a value AND a function that **changes**/reacts the value, hence we have the dynamic behaviour from ```React```:
 
-## Don't Know Yet
-React Fragment: <> </> In the end of our function we have to return only one thing. Which is this empty tag, which is actually not empty, just a lazy way of saying: ```<React.Fragment> </React.Fragment>```
+```JS
+function Item() {
+    // count is our reactive state and setCount changes the state
+    const [count, setCount] = useState(0);
+
+    /*React Fragment: <> </> In the end of our function we have to return only one thing. Which is this empty tag, which is actually not empty, just a lazy way of saying: <React.Fragment> </React.Fragment> */
+    return <>
+
+    // Now we would bind this reactive state to a button in HTML (JSX)
+    <p>{count}</p>
+    <button 
+        onClick= {() => setCount(count + 1)}>
+    </button>
+}
+```
+
+The advantage of React is that usually there's been already something developed (library/component) or to support what you want to do, e.g:
+- Static Site: Gatsby
+- Server-side Rendering: Next.js
+- Animation: Spring
+- Forms: Formik
+- State Management: Redux, Mobx, XState, Recoil
+
+And if we want to build applications for mobile: Reactive Native (Apple and Android).
+
 
 ## Hooks
 React hooks x 
@@ -35,7 +57,7 @@ carrying: uma função que executa uma função... Bom pra teste automaizado
 SEMPRE DENTRO DE EVENTOS PASSAMOS FUNCOES
 E SEMPRE DENTRO DE EVENTOS , ARROW FUNCTIONS (PRA TER A REFERENCIA DO CONTEXTO?X)
 
-Reserved keywords:
+Reserved Keywords:
 - ```extends``` : eh uma subclasse de uma classe (React.Component)
 - ```super```: usamos super pra acessar um construtor
 - ```this```: contexto, sempre quando estamos dentro de uma classe e escrevemos isso, referenciamos o contexto (a classe)
