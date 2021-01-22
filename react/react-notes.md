@@ -1,10 +1,42 @@
 # Notes
 
+## React Installation
+Check if NodeJS and npm is installed beforehand:
+
+```
+$ npm -v 
+
+$ node -v
+```
+
+If using Ubuntu, make sure to add npm to PATH, instead we would need to use sudo for installing any package because Nodejs is located on /usr/lib, for that,
+create the following alias on the .bashrc:
+```alias confignpmpath='npm set prefix ~/.npm ; PATH="$HOME/.npm/bin:$PATH" ; PATH="./node_modules/.bin:$PATH"' ```
+
+And on the last line, call it:
+``` confignpmpath ```
+
+Now we can install the dependecies properly:
+```
+$ npm install -g create-react-app
+
+```
+
+When creating an app for the first time it will download some basic packages such: react, react-dom and so on, so it may take a long time when you do the following command:
+``` $ npx create-react-app first-react-app ```
+
+Make sure to install the router library and update our application package.json:
+```
+$ npm i react-router-dom --save
+
+```
+
+
 ## Motivation: why use React?
 Event-driven programming.
 
 ## Understanding React
-React is all about component. Usually we have one component per file, so for an application we would have: ```Button.js```, ```Window.js``` and so on.
+React is all about component. Usually we have one component per file, so for an application we would have: ```Button.js```, ```Window.js``` and so on and components are usually reusable parts in the application.
 Each component in React is basically a function in JS and this function returns a HTML (UI), which is written in JSX.
 JSX = JavaScript XML, basically HTML.
 
