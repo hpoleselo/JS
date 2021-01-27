@@ -31,6 +31,11 @@ $ npm i react-router-dom --save
 
 ```
 
+When cloning a React repository from GitHub, ``` node-modules ``` folder is already in gitignore and it's needed to install all the modules locally on the project (instead of uploading it to GitHub and overloading it), so before running ```npm start ```, we have to:
+
+ ``` $ npm install ```
+
+Which will install all dependencies from the packages.json
 
 ## Motivation: why use React?
 Event-driven programming.
