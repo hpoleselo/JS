@@ -1,41 +1,38 @@
+@font-face {
+    font-family: Helvetica;
+    src: url(HelveticaLTStd-Light.otf);
+}
+
 body {
     background-color: #FFCC00;
-    padding: 20px;
     margin: 0;
   }
-  h1, h2, p, ul, li {
-    font-family: sans-serif;
-  }
-  ul.header li {
-    display: inline;
-    list-style-type: none;
-    margin: 0;
-  }
-  ul.header {
-    background-color: #111;
-    padding: 0;
-  }
-  ul.header li a {
-    color: #FFF;
-    font-weight: bold;
-    text-decoration: none;
-    padding: 20px;
-    display: inline-block;
-  }
-  .content {
-    background-color: #FFF;
-    padding: 20px;
-  }
-  .content h2 {
+
+.grid {
+    display: grid;
+    width: 50vw;
+    height: 100vh;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 20fr;
+}
+
+
+.navBar{
+    background-color: rgb(124, 123, 123);
+    height: 100%;
+    grid-area: 1 / 1 / span 1 / span 1;
     padding: 0;
     margin: 0;
-  }
-  .content li {
-    margin-bottom: 10px;
-  }
+}
+
+h1, h2, p, ul, li {
+    font-family: "HelveticaLTStd-Light", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", 
+    Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
 
 /* Refers to the class active that is already built-in when we built the NavLink */
 /* We don't see it explicitly in the code, but it has the following:  aria-current="true" href="#/stuff" class="active">Stuff</a> */
-  .active {
+.active {
     background-color: #0099FF;
-  }
+}

@@ -1,13 +1,5 @@
 import React, { Component } from "react";
-import "./style.css";
-// Adding the routing part to link our late-added components/pages
-import {
-    Route,
-    NavLink,
-    Router,
-    Switch
-  } 
-from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 // Importing the NavBar
 import NavBar from "./../NavBar/";
@@ -18,12 +10,33 @@ import PersonalNotes from "./../../pages/PersonalNotes";
 import SensorMonitor from "./../../pages/SensorMonitor";
 import Portfolio from "./../../pages/Portfolio";
 
+import "./style.css";
+
 // The static part from our SPA, also called app frame is the HTML element
 // which acts as a container for our content
 
 export default function App() {
     return (
-      <NavBar/>
+        <Router>
+            <div className="grid">
+                <div className="navBar">
+                 <NavBar/>
+                </div>
+            
+                <div className="pages">
+                    <Switch>
+                        <Route exact path="/" component={Home}/>
+                        <Route path="/portfolio" component={Portfolio}/>
+                        <Route path="/sensormonitor" component={SensorMonitor}/>
+                        <Route path="/personalnotes" component={PersonalNotes}/>
+
+
+                    </Switch>
+
+                </div>
+            </div>
+
+        </Router>
     );
 
 }
