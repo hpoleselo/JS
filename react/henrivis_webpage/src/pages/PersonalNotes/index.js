@@ -1,14 +1,11 @@
-import React, { Component } from "react";
+import React from "react";
  
-class PersonalNotes extends Component {
-  render() {
+export default function PersonalNotes() {
     return (
       <div>
         <h2>Notes from GitHub</h2>
         <p>Retrieving from my notations in GitHub. API async and so on.</p>
       </div>
-    );
-  }
+    )
+
 }
- 
-export default PersonalNotes;

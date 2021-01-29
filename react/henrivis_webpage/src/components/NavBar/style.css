@@ -1,0 +1,11 @@
+.navBar{
+    background-color: rgb(124, 123, 123);
+    height: 100%;
+    padding: 5px;
+}
+
+{/* Hide underline text and color from Links*/}
+.text-link {
+    color: inherit;
+    text-decoration: inherit;
+}

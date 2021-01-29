@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 // Importing the NavBar
@@ -12,16 +12,12 @@ import Portfolio from "./../../pages/Portfolio";
 
 import "./style.css";
 
-// The static part from our SPA, also called app frame is the HTML element
-// which acts as a container for our content
 
 export default function App() {
     return (
         <Router>
             <div className="grid">
-                <div className="navBar">
-                 <NavBar/>
-                </div>
+                <NavBar/>
             
                 <div className="pages">
                     <Switch>

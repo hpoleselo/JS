@@ -12,27 +12,29 @@ import "./style.css";
 // export as const since the navbar is static? 
 export default function NavBar() {
     return (
-        <div className="nav-links">
-            <Link to="/">
-                <div>
-                    <h3>Home <IoIosHome/></h3>
-                </div>
-            </Link>
-            <Link to="/portfolio">
-                <div>
-                    <h3>Portfolio <IoIosBriefcase/></h3>
-                </div>
-            </Link>
-            <Link to="/sensormonitor">
-                <div>
-                    <h3>Sensor Monitor <GiMovementSensor/> </h3>
-                </div>
-            </Link>
-            <Link to="/personalnotes">
-                <div>
-                    <h3>Personal Notes  <FaPencilAlt/></h3>
-                </div>
-            </Link>
+        <div className="navBar">
+            <div className="nav-links">
+                <Link className="text-link" to="/">
+                    <div>
+                        <h3><IoIosHome/> Home</h3>
+                    </div>
+                </Link>
+                <Link className="text-link" to="/portfolio">
+                    <div>
+                        <h3><IoIosBriefcase/> Portfolio</h3>
+                    </div>
+                </Link>
+                <Link className="text-link" to="/sensormonitor">
+                    <div>
+                        <h3><GiMovementSensor/> Sensor Monitor</h3>
+                    </div>
+                </Link>
+                <Link className="text-link" to="/personalnotes">
+                    <div>
+                        <h3><FaPencilAlt/> Personal Notes</h3>
+                    </div>
+                </Link>
+            </div>
         </div>
     );
 
