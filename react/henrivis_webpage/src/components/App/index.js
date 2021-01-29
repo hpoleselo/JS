@@ -26,11 +26,10 @@ export default function App() {
                 <div className="pages">
                     <Switch>
                         <Route exact path="/" component={Home}/>
+                        {/* We say the path that it goes when we click and which component is going to render out. */}
                         <Route path="/portfolio" component={Portfolio}/>
                         <Route path="/sensormonitor" component={SensorMonitor}/>
                         <Route path="/personalnotes" component={PersonalNotes}/>
-
-
                     </Switch>
 
                 </div>
