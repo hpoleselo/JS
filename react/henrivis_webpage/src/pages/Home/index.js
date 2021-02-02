@@ -4,10 +4,10 @@ import { FaTelegram } from "react-icons/fa"
 
 export default function Home() {
     return (
-      <div>
+      <div classname="home">
         <h2>My space on the web.</h2>
         <p>Surfing, nature, video editing, programming and robotics.</p>
-        <div>
+        <div className="icons">
             <a href="https://github.com/hpoleselo/">
                 <IoIcons.IoLogoGithub/>
             </a>
